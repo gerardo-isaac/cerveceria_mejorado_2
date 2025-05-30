@@ -1,0 +1,182 @@
+/* Estilo general del cuerpo */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* ---------- ENCABEZADO GENERAL ---------- */
+header {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* Estilo exclusivo para el INDEX con logo y texto */
+.index-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Imagen del logo */
+.logo {
+  height: 80px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Contenedor del título y subtítulo */
+.titulo-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.titulo-texto h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.titulo-texto p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Título centrado para páginas internas (sin logo) */
+.header-interno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 4rem; /* ← espacio para no empalmar con el botón volver */
+}
+
+.header-interno h1 {
+  margin-bottom: 0.3rem;
+  font-size: 3.5rem;
+}
+
+.header-interno p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* ---------- BOTÓN DE REGRESO ---------- */
+.volver {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9999;
+}
+
+.volver a {
+  text-decoration: none !important;
+  font-weight: bold;
+  color: #6c2c0f !important;
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, transform 0.2s;
+  font-size: 0.9rem;
+}
+
+.volver a:hover {
+  background-color: #f0eae5;
+  transform: scale(1.05);
+}
+
+/* ---------- CONTENEDOR PRINCIPAL ---------- */
+.catalogo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+@media(min-width: 768px) {
+  .catalogo {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cerveza {
+    max-width: 300px;
+    flex: 1 1 300px;
+  }
+}
+
+/* ---------- TARJETAS DE CERVEZA ---------- */
+.cerveza {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.cerveza:hover {
+  transform: scale(1.02);
+}
+
+/* Contenedor de imagen centrado */
+.img-container {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+
+.img-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Contenido textual */
+.contenido {
+  padding: 1rem;
+}
+
+.contenido h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #6c2c0f;
+}
+
+.contenido p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ---------- ENLACES ---------- */
+.cerveza a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cerveza a:hover {
+  color: #6c2c0f;
+}
+
+/* ---------- PIE DE PÁGINA ---------- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+}
